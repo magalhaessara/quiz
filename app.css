@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@100;400&display=swap');
+
+.answer {
+    display: none;
+}
+
+
+/* Deixando as imagens 2x2*/
+
+
+.options img {
+    float: left;
+    width: 50%;
+}
+
+/* Estruturand estilo geral do body*/
+
+
+body {
+    color: DarkSlateBlue;
+    font-family: 'Roboto',sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Adaptando larguar otimizado para celular*/
+
+.quiz {
+ width:100%;
+ max-width: 360px; 
+ margin: 0 auto; 
+}
+
+/* Limitando a uma escolha */
+
+
+.quiz.inactive {
+    pointer-events: none;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+/*Set up das imagens */
+
+.opcao {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    height: 160px;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* Deixando as imagens mais opacas quando faz hover em cima*/
+
+.opcao:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+/* Azul se acertar, vermelho se errar */
+
+
+.opcao.clicked {
+    filter: opacity(0.5) drop-shadow(0 0 0 red);
+}
+
+.opcao.clicked.correct {
+    filter: opacity(0.5) drop-shadow(0 0 0 blue);
+}
+
+
+.paragrafo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Reduzindo tamanho da image pos-resposta*/
+
+
+.imagem {
+    width: 72px;
+}
